@@ -61,7 +61,29 @@
 #########################################
 
 
+# def ex_decorator(func):
+#     def wrapper(*args, **kwargs):
+#         print('This happens before')
+#         the_function = func(*args, **kwargs)
+#         print('This happens after')
+#         return the_function
+#     return wrapper
+
+
+# @ex_decorator
+# def return_a_greeting(name):
+#     print('The greeting was created!')
+#     return f'Hi, {name}!'
+
+#########################################
+# EXAMPLE V5
+#########################################
+
+import functools
+
+
 def ex_decorator(func):
+    @functools.wraps(func)
     def wrapper(*args, **kwargs):
         print('This happens before')
         the_function = func(*args, **kwargs)
