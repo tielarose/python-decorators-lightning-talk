@@ -25,3 +25,7 @@ def ex_decorator(func):
 # # prints 'This happens before'
 # # prints 'Hi
 # # prints 'This happens after'
+
+#########################################
+# EXAMPLE 2
+#########################################
