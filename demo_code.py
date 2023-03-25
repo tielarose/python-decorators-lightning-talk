@@ -2,20 +2,21 @@
 # EXAMPLE V1
 #########################################
 
-# def print_hi():
-#     print(f'Hi!')
+
+def print_hi():
+    print(f'Hi!')
 
 
-# def ex_decorator(func):
-#     def wrapper():
-#         print('This happens before')
-#         func()
-#         print('This happens after')
-#     return wrapper
+def ex_decorator(func):
+    def wrapper():
+        print('This happens before')
+        func()
+        print('This happens after')
+    return wrapper
 
 
-# # reassign the function using the decorator
-# print_hi = ex_decorator(print_hi)
+# reassign the function using the decorator
+print_hi = ex_decorator(print_hi)
 
 #########################################
 # EXAMPLE V2
@@ -79,8 +80,6 @@
 # EXAMPLE V5
 #########################################
 
-# import functools
-
 
 # def ex_decorator(func):
 #     @functools.wraps(func)
@@ -97,18 +96,18 @@
 #     print('The greeting was created!')
 #     return f'Hi, {name}!'
 
-#########################################
-# EXAMPLE V6
-#########################################
+# #########################################
+# # EXAMPLE V6
+# #########################################
 
-import functools
+# import functools
 
 
-def ex_decorator(func):
-    @functools.wraps(func)
-    def wrapper(*args, **kwargs):
-        # Something happens before the function
-        the_function = func(*args, **kwargs)
-        # Something happens after the function
-        return the_function
-    return wrapper
+# def ex_decorator(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         # Something happens before the function
+#         the_function = func(*args, **kwargs)
+#         # Something happens after the function
+#         return the_function
+#     return wrapper
